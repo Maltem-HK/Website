@@ -29,7 +29,7 @@ export class Welcome extends Component {
                 <div key={item.id}>
                   {item.word}
                   <Typing.Delay ms={5000} />
-                  <Typing.Backspace count={6} />
+                  <Typing.Backspace count={item.word.length} />
                 </div>
               ))
             }
