@@ -20,7 +20,7 @@ const socialNetworksActionSpy = sinon.spy();
 const {
   mapStateToProps, mapDispatchToProps,
 } = proxyquire('./SocialNetwork.jsx', {
-  '../../../actions/socialNetworks': {
+  '../../actions/socialNetworks': {
     socialNetworksFetchData: socialNetworksActionSpy,
   },
 });

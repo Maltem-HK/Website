@@ -9,7 +9,7 @@ import {
   faYoutube,
   faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
-import { socialNetworksFetchData } from '../../../actions/socialNetworks';
+import { socialNetworksFetchData } from '../../actions/socialNetworks';
 import './socialnetwork.scss';
 
 export class SocialNetwork extends Component {

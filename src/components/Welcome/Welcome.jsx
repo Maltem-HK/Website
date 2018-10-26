@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import { welcomeFetchData } from '../../actions/welcome';
-import SocialNetworkComponent from '../Common/SocialNetwork/SocialNetwork';
+import SocialNetworkComponent from '../SocialNetwork/SocialNetwork';
 import './welcome.scss';
 
 export class Welcome extends Component {
