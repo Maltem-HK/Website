@@ -1,0 +1,15 @@
+.social-network {
+  font-size: 1em;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  svg {
+    padding: 0 30px 0 30px;
+  }
+  a {
+    color: #FFFFFF
+  }
+}

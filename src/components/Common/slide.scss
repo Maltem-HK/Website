@@ -1,0 +1,7 @@
+.slide {
+  min-height: 100%;
+  &-content {
+    background-color: transparent;
+    min-height: 100%;
+  }
+}
