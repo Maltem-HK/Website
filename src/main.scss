@@ -11,8 +11,22 @@ html, body {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
+  font-family: "Avenir Next";
 }
 
 #app, #app-content, #app > div {
   height: 100%;
+}
+
+:root {
+  --maltem_red: rgb(209, 42, 60);
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+img {
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }

@@ -1,16 +1,9 @@
 import axios from 'axios';
 import config from '../config';
 
-export function getWelcomeWords() {
+export default function getAgglomeratedData() {
   return axios({
     method: 'GET',
-    url: `${config.backendURL}/welcomewords`,
-  });
-}
-
-export function getSocialNetworks() {
-  return axios({
-    method: 'GET',
-    url: `${config.backendURL}/socialnetworks`,
+    url: `${config.backendURL}/agglomerates`,
   });
 }

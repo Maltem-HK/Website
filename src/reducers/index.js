@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import welcome from './welcome';
-import socialNetworks from './socialNetworks';
+import agglomerate from './agglomerate';
 
 export default combineReducers({
-  welcome,
-  socialNetworks,
+  agglomerate,
 });

@@ -1,0 +1,30 @@
+.general-info-eco-item {
+  min-height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
+  margin: 10px 0 10px 0;
+  img {
+    max-height: 120px;
+    max-width: 120px;
+    margin: 0 20px 0 20px;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-name {
+      font-size: 1.5em;
+      color: var(--maltem_red);;
+    }
+    &-title {
+      font-size: 1em;
+    }
+    &-description {
+      font-size: 1em;
+      color: #A5A5A5;
+    }
+  }
+}
