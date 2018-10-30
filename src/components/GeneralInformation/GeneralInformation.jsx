@@ -25,32 +25,32 @@ const GeneralInformation = ({ generalinformation: { description } }) => (
       <GeneralInfoEco
         image={IconMIP}
         name="Maltem Insight Performance"
-        title="Product and communication consulting agency"
-        description="Emerging technologies, Innovative usages, POC"
+        title=""
+        description="Data performance, Data monitoring"
       />
       <GeneralInfoEco
         image={IconGuiz}
-        name="Guiz"
-        title="Product and communication consulting agency"
-        description="Emerging technologies, Innovative usages, POC"
+        name="Guiz Digital"
+        title="Digital Communication Agency"
+        description="Digital solutions, Digital Marketing, Brand content."
       />
       <GeneralInfoEco
         image={IconBocasay}
         name="Bocasay"
-        title="Product and communication consulting agency"
+        title="Offshore Service Center"
         description="Emerging technologies, Innovative usages, POC"
       />
       <GeneralInfoEco
         image={IconFrianbiz}
         name="Frianbiz"
-        title="Product and communication consulting agency"
-        description="Emerging technologies, Innovative usages, POC"
+        title="IT Consulting Agency"
+        description="Innovation, Emerging technologies, Digital production"
       />
       <GeneralInfoEco
         image={IconDesignLab}
         name="Maltem Design Lab Asia"
-        title="Product and communication consulting agency"
-        description="Emerging technologies, Innovative usages, POC"
+        title=""
+        description="Design thinking, Emergin technologies production, Incubation"
       />
     </div>
   </div>
