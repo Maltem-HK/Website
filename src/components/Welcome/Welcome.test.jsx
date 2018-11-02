@@ -17,7 +17,7 @@ const Welcome = proxyquire('./Welcome.jsx', {
 describe('Welcome', () => {
   beforeEach(() => {
     welcomeWords = [{ id: 1, word: 'Maltem' }, { id: 2, word: 'Splendid' }];
-    socialNetworks = { facebook: 'facebook URL' };
+    socialNetworks = [{ name: 'facebook', url: 'facebook URL' }];
   });
 
   it('renders the Welcome component', () => {

@@ -5,7 +5,7 @@ import {
 } from '../constants/action-types';
 
 export const initialState = {
-  socialnetworks: {},
+  socialnetworks: [],
   welcomewords: [],
   generalinformation: {},
   isLoading: false,

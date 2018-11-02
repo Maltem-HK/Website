@@ -47,7 +47,7 @@ const Welcome = ({
 
 Welcome.propTypes = {
   welcomeWords: PropTypes.arrayOf(Object).isRequired,
-  socialNetworks: PropTypes.objectOf(String).isRequired,
+  socialNetworks: PropTypes.arrayOf(Object).isRequired,
 };
 
 export default Welcome;

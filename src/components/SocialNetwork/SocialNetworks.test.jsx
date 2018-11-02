@@ -10,15 +10,13 @@ let socialNetworks;
 
 describe('SocialNetwork', () => {
   beforeEach(() => {
-    socialNetworks = {
-      facebook: 'facebook URL',
-      twitter: 'twitter URL',
-      instagram: 'instagram URL',
-      youtube: 'youtube URL',
-      linkedin: 'linkedin URL',
-      hasErrored: false,
-      isLoading: false,
-    };
+    socialNetworks = [
+      { name: 'facebook', url: 'facebook URL' },
+      { name: 'twitter', url: 'twitter URL' },
+      { name: 'instagram', url: 'instagram URL' },
+      { name: 'youtube', url: 'youtube URL' },
+      { name: 'linkedin', url: 'linkedin URL' },
+    ];
   });
 
   it('renders the SocialNetwork component', () => {
@@ -33,7 +31,7 @@ describe('SocialNetwork', () => {
   it('renders the SocialNetwork component when socialNetworks is empty', () => {
     const wrapper = shallow(
       <SocialNetwork
-        socialNetworks={{}}
+        socialNetworks={[]}
       />,
     );
     expect(wrapper.find('.social-network').children()).to.have.lengthOf(0);
