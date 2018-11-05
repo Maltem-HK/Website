@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AnimatedNumber from 'react-animated-number';
-import maltemLogo from '../../assets/img/maltem-logo-black.png';
+import maltemLogo from '../../assets/img/maltem-logo-dark.png';
 import './key-figures.scss';
 
 const KeyFigures = ({
