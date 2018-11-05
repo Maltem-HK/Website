@@ -24,9 +24,10 @@ const {
 });
 
 const { App } = proxyquire('./App.jsx', {
-  './Common/Slide': '',
+  './Common/Slide/Slide': '',
   './Welcome/Welcome': '',
   './GeneralInformation/GeneralInformation': '',
+  './Team/Team': '',
 });
 
 describe('App', () => {
@@ -37,6 +38,9 @@ describe('App', () => {
       welcomewords: [],
       generalinformation: {
         description: 'some desc',
+      },
+      team: {
+        description: 'team description',
       },
       isLoading: false,
       hasErrored: false,
@@ -50,40 +54,7 @@ describe('App', () => {
         agglomerate={agglomerate}
       />,
     );
-    expect(wrapper.find('#app-content').children()).to.have.lengthOf(2);
-  });
-
-  it('renders the App component when hasErrored is true', () => {
-    agglomerate.hasErrored = true;
-    const wrapper = shallow(
-      <App
-        agglomerateFetch={() => {}}
-        agglomerate={agglomerate}
-      />,
-    );
-    expect(wrapper.find('#app-content')).to.have.lengthOf(1);
-  });
-
-  it('renders the App component when isLoading is true', () => {
-    agglomerate.isLoading = true;
-    const wrapper = shallow(
-      <App
-        agglomerateFetch={() => {}}
-        agglomerate={agglomerate}
-      />,
-    );
-    expect(wrapper.find('#app-content')).to.have.lengthOf(1);
-  });
-
-  it('renders the App component when generalinformation is empty', () => {
-    agglomerate.generalinformation = {};
-    const wrapper = shallow(
-      <App
-        agglomerateFetch={() => {}}
-        agglomerate={agglomerate}
-      />,
-    );
-    expect(wrapper.find('#app-content')).to.have.lengthOf(1);
+    expect(wrapper.find('#app-content').children()).to.have.lengthOf(3);
   });
 
   it('test the mapStateToProps function', () => {

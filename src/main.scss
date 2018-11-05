@@ -1,3 +1,11 @@
+:root {
+  --maltem_red: rgb(209, 42, 60);
+}
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 html, body {
   margin: 0;
   min-height: 100%;
@@ -18,14 +26,6 @@ html, body {
   height: 100%;
 }
 
-:root {
-  --maltem_red: rgb(209, 42, 60);
-}
-
-@-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 img {
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;

@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
-import SlideComponent from './Common/Slide';
+import SlideComponent from './Common/Slide/Slide';
 import WelcomeComponent from './Welcome/Welcome';
 import GeneralInformationComponent from './GeneralInformation/GeneralInformation';
+import Team from './Team/Team';
+import Conditional from './Common/Conditional/Conditional';
 import { agglomerateFetchData } from '../actions/agglomerate';
 import isEmpty from '../utils/object';
 
@@ -16,12 +18,24 @@ export class App extends Component {
     agglomerateFetch();
   }
 
+  loadSuccess(dataKey) {
+    const {
+      agglomerate,
+      agglomerate: {
+        isLoading,
+        hasErrored,
+      },
+    } = this.props;
+    return !isLoading && !hasErrored && !isEmpty(agglomerate[dataKey]);
+  }
+
   render() {
     const {
       agglomerate: {
         welcomewords,
         socialnetworks,
         generalinformation,
+        team,
       },
     } = this.props;
 
@@ -33,19 +47,24 @@ export class App extends Component {
             socialNetworks={socialnetworks}
           />
         </SlideComponent>
-        {!isEmpty(generalinformation)
-          && (
-            <SlideComponent className="slide-general-information">
-              <ScrollableAnchor id="general-information">
-                <div>
-                  <GeneralInformationComponent
-                    generalinformation={generalinformation}
-                  />
-                </div>
-              </ScrollableAnchor>
-            </SlideComponent>
-          )
-        }
+        <Conditional test={this.loadSuccess('generalinformation')}>
+          <SlideComponent className="slide-general-information">
+            <ScrollableAnchor id="general-information">
+              <div>
+                <GeneralInformationComponent
+                  generalinformation={generalinformation}
+                />
+              </div>
+            </ScrollableAnchor>
+          </SlideComponent>
+        </Conditional>
+        <Conditional test={this.loadSuccess('team')}>
+          <SlideComponent className="slide-team">
+            <Team
+              team={team}
+            />
+          </SlideComponent>
+        </Conditional>
       </div>
     );
   }

@@ -8,6 +8,7 @@ export const initialState = {
   socialnetworks: [],
   welcomewords: [],
   generalinformation: {},
+  team: {},
   isLoading: false,
   hasErrored: false,
 };
