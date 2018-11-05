@@ -11,7 +11,7 @@ const Team = ({
   team,
 }) => (
   <div className="ourteam">
-    <div className="ourteam-title"><span>Our team</span></div>
+    <div className="ourteam-title main-title"><span>Our team</span></div>
     <div className="ourteam-description">{team.description}</div>
     <div className="team">
       {

@@ -11,7 +11,7 @@ import './generalinformation.scss';
 
 const GeneralInformation = ({ generalinformation: { description } }) => (
   <div className="general-information">
-    <div className="general-information-title">Maltem Consulting Group</div>
+    <div className="general-information-title main-title"><span>Maltem Consulting Group</span></div>
     {description
     && <div className="general-information-description">{description}</div>
     }

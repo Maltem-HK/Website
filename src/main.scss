@@ -30,3 +30,24 @@ img {
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
+
+.main-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: var(--maltem_red);
+  margin-bottom: 20px;
+  :after, :before {
+    position: absolute;
+    margin-top: 25px;
+    overflow: hidden;
+    height: 3px;
+    content: '\a0';
+    background-color: var(--maltem_red);
+    width: 10%;
+    margin-left: 3%;
+  }
+  :before {
+    margin-left: -13%;
+    text-align: right;
+  }
+}

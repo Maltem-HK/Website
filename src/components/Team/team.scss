@@ -1,25 +1,4 @@
 .ourteam {
-  &-title {
-    text-align: center;
-    font-size: 2.5em;
-    color: var(--maltem_red);
-    margin-bottom: 20px;
-    padding-top: 50px;
-    :after, :before {
-      position: absolute;
-      margin-top: 25px;
-      overflow: hidden;
-      width: 30%;
-      height: 3px;
-      content: '\a0';
-      background-color: var(--maltem_red);
-      margin-left: 3%;
-    }
-    :before {
-      margin-left: -33%;
-      text-align: right;
-    }
-  }
   &-description {
     text-align: center;
     font-size: 1.2em;
