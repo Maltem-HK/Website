@@ -10,8 +10,9 @@ import './team.scss';
 const Team = ({
   team,
 }) => (
-  <div>
+  <div className="ourteam">
     <div className="ourteam-title"><span>Our team</span></div>
+    <div className="ourteam-description">{team.description}</div>
     <div className="team">
       {
         team.members.map((member) => {
