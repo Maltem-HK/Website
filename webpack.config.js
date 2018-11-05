@@ -53,7 +53,7 @@ module.exports = {
         use: [ 'style-loader', 'css-loader' ]
       },
       {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|ico)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2|ico)$/,
         use: [{
           loader: 'url-loader',
           options: { limit: 10000 }

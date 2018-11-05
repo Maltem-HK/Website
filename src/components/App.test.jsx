@@ -28,6 +28,7 @@ const { App } = proxyquire('./App.jsx', {
   './Welcome/Welcome': '',
   './GeneralInformation/GeneralInformation': '',
   './Team/Team': '',
+  './KeyFigures/KeyFigures': '',
 });
 
 describe('App', () => {
@@ -54,7 +55,7 @@ describe('App', () => {
         agglomerate={agglomerate}
       />,
     );
-    expect(wrapper.find('#app-content').children()).to.have.lengthOf(3);
+    expect(wrapper.find('#app-content').children()).to.have.lengthOf(4);
   });
 
   it('test the mapStateToProps function', () => {

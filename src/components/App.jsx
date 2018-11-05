@@ -6,6 +6,7 @@ import SlideComponent from './Common/Slide/Slide';
 import WelcomeComponent from './Welcome/Welcome';
 import GeneralInformationComponent from './GeneralInformation/GeneralInformation';
 import Team from './Team/Team';
+import KeyFigures from './KeyFigures/KeyFigures';
 import Conditional from './Common/Conditional/Conditional';
 import { agglomerateFetchData } from '../actions/agglomerate';
 import isEmpty from '../utils/object';
@@ -36,6 +37,7 @@ export class App extends Component {
         socialnetworks,
         generalinformation,
         team,
+        keyfigures,
       },
     } = this.props;
 
@@ -62,6 +64,13 @@ export class App extends Component {
           <SlideComponent className="slide-team">
             <Team
               team={team}
+            />
+          </SlideComponent>
+        </Conditional>
+        <Conditional test={this.loadSuccess('keyfigures')}>
+          <SlideComponent className="slide-key-figures">
+            <KeyFigures
+              keyFigures={keyfigures}
             />
           </SlideComponent>
         </Conditional>

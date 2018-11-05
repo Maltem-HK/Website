@@ -9,6 +9,7 @@ export const initialState = {
   welcomewords: [],
   generalinformation: {},
   team: {},
+  keyfigures: [],
   isLoading: false,
   hasErrored: false,
 };

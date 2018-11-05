@@ -81,6 +81,7 @@
     "dotenv-extended": "^2.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
+    "react-animated-number": "^0.4.4",
     "react-dom": "^16.5.2",
     "react-favicon": "0.0.14",
     "react-redux": "^5.1.0",

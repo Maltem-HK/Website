@@ -12,8 +12,19 @@ describe('Team', () => {
   beforeEach(() => {
     team = {
       members: [
-        { firstName: 'bob', lastName: 'Rayman', photo: { url: 'photo url!' } },
-        { firstName: 'bob', lastName: 'Moran' },
+        {
+          id: 1,
+          firstName: 'bob',
+          lastName: 'Rayman',
+          photo: {
+            url: 'photo url!',
+          },
+        },
+        {
+          id: 2,
+          firstName: 'bob',
+          lastName: 'Moran',
+        },
       ],
     };
   });
