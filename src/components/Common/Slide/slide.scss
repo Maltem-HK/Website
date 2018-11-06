@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   >div {
-    min-height: 100%;
+    min-height: 100vh;
   }
   &-content {
     background-color: transparent;
-    min-height: 100%;
+    min-height: 100vh;
   }
 }

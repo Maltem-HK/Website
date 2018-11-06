@@ -1,0 +1,37 @@
+.footer {
+  color: #EEEEEE;
+  background-color: #111111;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  &-sitemap {
+    display: flex;
+    flex-direction: column;
+    a {
+      svg {
+        min-width: 30px;
+      }
+      color: #EEEEEE;
+      text-decoration: none;
+    }
+  }
+  .social-network svg {
+    padding: 0;
+  }
+  .social-network a {
+    margin: 0 30px 0 0;
+  }
+  .social-network a:last-child {
+    margin: 0;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #6a6a6a;
+  }
+}

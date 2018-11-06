@@ -5,6 +5,7 @@ import Favicon from 'react-favicon';
 import store from './store/index';
 import Application from './components/App';
 import favicon from './assets/img/favicon.ico';
+import FooterComponent from './components/Footer/Footer';
 import './main.scss';
 
 render(
@@ -12,6 +13,7 @@ render(
     <div>
       <Favicon url={favicon} />
       <Application />
+      <FooterComponent />
     </div>
   </Provider>,
   document.getElementById('app'),

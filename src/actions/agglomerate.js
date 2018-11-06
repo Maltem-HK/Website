@@ -24,9 +24,18 @@ export function agglomerateFetchDataSuccess(data) {
   };
 }
 export function agglomerateFetchData() {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+    const {
+      agglomerate: {
+        isLoading,
+        hasLoaded,
+      },
+    } = getState();
+
+    if (isLoading || hasLoaded) return getState();
+
     dispatch(agglomerateIsLoading(true));
-    getAgglomeratedData()
+    return getAgglomeratedData()
       .then((res) => {
         dispatch(agglomerateIsLoading(false));
         dispatch(agglomerateFetchDataSuccess(res.data[0]));

@@ -12,12 +12,13 @@ export const initialState = {
   keyfigures: [],
   isLoading: false,
   hasErrored: false,
+  hasLoaded: false,
 };
 
 export default function agglomerate(state = initialState, action = {}) {
   switch (action.type) {
     case AGGLOMERATE_FETCH_DATA_SUCCESS:
-      return { ...state, ...action.data };
+      return { ...state, ...action.data, hasLoaded: true };
     case AGGLOMERATE_IS_LOADING:
       return { ...state, isLoading: action.isLoading };
     case AGGLOMERATE_HAS_ERRORED:

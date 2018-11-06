@@ -16,6 +16,8 @@ const types = {
   AGGLOMERATE_IS_LOADING: 'AGGLOMERATE_IS_LOADING',
   AGGLOMERATE_FETCH_DATA_SUCCESS: 'AGGLOMERATE_FETCH_DATA_SUCCESS',
 };
+let getState;
+let defaultState;
 
 const {
   agglomerateHasErrored,
@@ -32,6 +34,10 @@ describe('Action agglomerate', () => {
     backendServiceStub.reset();
     backendServiceStub.returns(Promise.resolve());
     dispatchSpy.resetHistory();
+    defaultState = {
+      agglomerate: {},
+    };
+    getState = () => defaultState;
   });
 
   it('should call agglomerateHasErrored successfully', () => {
@@ -57,7 +63,8 @@ describe('Action agglomerate', () => {
   it('should call agglomerateFetchData successfully', async () => {
     const res = { data: [{ data: 'here!' }] };
     backendServiceStub.returns(Promise.resolve(res));
-    await agglomerateFetchData()(dispatchSpy);
+
+    await agglomerateFetchData()(dispatchSpy, getState);
 
     expect(dispatchSpy).to.have.been.calledWith({
       type: types.AGGLOMERATE_IS_LOADING,
@@ -73,11 +80,18 @@ describe('Action agglomerate', () => {
     });
   });
 
+  it('should call agglomerateFetchData and return the current state', async () => {
+    defaultState.agglomerate = {
+      hasLoaded: true,
+    };
+    expect(await agglomerateFetchData()(dispatchSpy, getState)).to.equal(getState());
+  });
+
   it('should call generalInformationFetchData and fail', async () => {
     backendServiceStub.returns(Promise.reject(new Error('service error')));
 
     try {
-      await agglomerateFetchData()(dispatchSpy);
+      await agglomerateFetchData()(dispatchSpy, getState);
     } catch (err) {
       expect(dispatchSpy).to.have.been.calledWith({
         type: types.AGGLOMERATE_IS_LOADING,
