@@ -11,7 +11,7 @@ import Conditional from './Common/Conditional/Conditional';
 import { agglomerateFetchData } from '../actions/agglomerate';
 import isEmpty from '../utils/object';
 
-configureAnchors({ scrollDuration: 500 });
+configureAnchors({ scrollDuration: 500, offset: -30 });
 
 export class App extends Component {
   componentDidMount() {
@@ -43,12 +43,16 @@ export class App extends Component {
 
     return (
       <div id="app-content">
-        <SlideComponent className="slide-welcome">
-          <WelcomeComponent
-            welcomeWords={welcomewords}
-            socialNetworks={socialnetworks}
-          />
-        </SlideComponent>
+        <ScrollableAnchor id="welcome">
+          <div>
+            <SlideComponent className="slide-welcome">
+              <WelcomeComponent
+                welcomeWords={welcomewords}
+                socialNetworks={socialnetworks}
+              />
+            </SlideComponent>
+          </div>
+        </ScrollableAnchor>
         <Conditional test={this.loadSuccess('generalinformation')}>
           <SlideComponent className="slide-general-information">
             <ScrollableAnchor id="general-information">
