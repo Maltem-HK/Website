@@ -8,9 +8,20 @@ import MaltemLogo from '../../assets/img/maltem-logo.png';
 import './header.scss';
 
 export class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isHide: false };
+    this.hideBar = this.hideBar.bind(this);
+  }
+
   componentDidMount() {
     const { agglomerateFetch } = this.props;
     agglomerateFetch();
+    window.addEventListener('scroll', this.hideBar);
+  }
+
+  hideBar() {
+    this.setState({ isHide: (window.scrollY < window.innerHeight) });
   }
 
   loadSuccess(dataKey) {
@@ -25,8 +36,9 @@ export class Header extends Component {
   }
 
   render() {
+    const { isHide } = this.state;
     return (
-      <nav className="header">
+      <nav className={`header ${isHide ? 'hide' : ''}`}>
         <ul>
           <li>
             <a href="#welcome">

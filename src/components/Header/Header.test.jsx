@@ -32,6 +32,13 @@ describe('Header', () => {
       team: {},
       keyfigures: [],
     };
+    global.window = {
+      addEventListener: (action, fct) => {
+        fct();
+      },
+      scrollY: 0,
+      innerHeight: 10,
+    };
   });
 
   it('renders the Header component', () => {
@@ -42,6 +49,28 @@ describe('Header', () => {
       />,
     );
     expect(wrapper.find('.header ul').children()).to.have.lengthOf(4);
+  });
+
+  it('renders the Header component without hide class', () => {
+    global.window.scrollY = 20;
+    const wrapper = shallow(
+      <Header
+        agglomerateFetch={() => {}}
+        agglomerate={agglomerate}
+      />,
+    );
+    expect(wrapper.find('.hide')).to.have.lengthOf(0);
+  });
+
+  it('renders the Header component with hide class', () => {
+    global.window.scrollY = 0;
+    const wrapper = shallow(
+      <Header
+        agglomerateFetch={() => {}}
+        agglomerate={agglomerate}
+      />,
+    );
+    expect(wrapper.find('.hide')).to.have.lengthOf(1);
   });
 
   it('test the mapStateToProps function', () => {
