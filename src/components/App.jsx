@@ -54,37 +54,37 @@ export class App extends Component {
           </div>
         </ScrollableAnchor>
         <Conditional test={this.loadSuccess('generalinformation')}>
-          <SlideComponent className="slide-general-information">
-            <ScrollableAnchor id="general-information">
-              <div>
+          <ScrollableAnchor id="general-information">
+            <div>
+              <SlideComponent className="slide-general-information">
                 <GeneralInformationComponent
                   generalinformation={generalinformation}
                 />
-              </div>
-            </ScrollableAnchor>
-          </SlideComponent>
+              </SlideComponent>
+            </div>
+          </ScrollableAnchor>
         </Conditional>
         <Conditional test={this.loadSuccess('team')}>
-          <SlideComponent className="slide-team">
-            <ScrollableAnchor id="our-team">
-              <div>
+          <ScrollableAnchor id="our-team">
+            <div>
+              <SlideComponent className="slide-team">
                 <Team
                   team={team}
                 />
-              </div>
-            </ScrollableAnchor>
-          </SlideComponent>
+              </SlideComponent>
+            </div>
+          </ScrollableAnchor>
         </Conditional>
         <Conditional test={this.loadSuccess('keyfigures')}>
-          <SlideComponent className="slide-key-figures">
-            <ScrollableAnchor id="key-facts">
-              <div>
+          <ScrollableAnchor id="key-facts">
+            <div>
+              <SlideComponent className="slide-key-figures">
                 <KeyFigures
                   keyFigures={keyfigures}
                 />
-              </div>
-            </ScrollableAnchor>
-          </SlideComponent>
+              </SlideComponent>
+            </div>
+          </ScrollableAnchor>
         </Conditional>
       </div>
     );

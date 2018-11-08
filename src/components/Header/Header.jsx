@@ -21,7 +21,7 @@ export class Header extends Component {
   }
 
   hideBar() {
-    this.setState({ isHide: (window.scrollY < window.innerHeight) });
+    this.setState({ isHide: (window.scrollY < window.innerHeight - 30) });
   }
 
   loadSuccess(dataKey) {

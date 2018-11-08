@@ -9,5 +9,9 @@
   &-content {
     background-color: transparent;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
   }
 }

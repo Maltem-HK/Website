@@ -63,7 +63,7 @@ describe('Header', () => {
   });
 
   it('renders the Header component with hide class', () => {
-    global.window.scrollY = 0;
+    global.window.scrollY = -21;
     const wrapper = shallow(
       <Header
         agglomerateFetch={() => {}}
