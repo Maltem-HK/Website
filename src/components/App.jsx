@@ -7,6 +7,7 @@ import WelcomeComponent from './Welcome/Welcome';
 import GeneralInformationComponent from './GeneralInformation/GeneralInformation';
 import Team from './Team/Team';
 import KeyFigures from './KeyFigures/KeyFigures';
+import AboutUs from './AboutUs/AboutUs';
 import Conditional from './Common/Conditional/Conditional';
 import { agglomerateFetchData } from '../actions/agglomerate';
 import isEmpty from '../utils/object';
@@ -38,6 +39,7 @@ export class App extends Component {
         generalinformation,
         team,
         keyfigures,
+        about,
       },
     } = this.props;
 
@@ -81,6 +83,17 @@ export class App extends Component {
               <SlideComponent className="slide-key-figures">
                 <KeyFigures
                   keyFigures={keyfigures}
+                />
+              </SlideComponent>
+            </div>
+          </ScrollableAnchor>
+        </Conditional>
+        <Conditional test={this.loadSuccess('about')}>
+          <ScrollableAnchor id="about-us">
+            <div>
+              <SlideComponent className="slide-about-us">
+                <AboutUs
+                  about={about}
                 />
               </SlideComponent>
             </div>

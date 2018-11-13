@@ -10,6 +10,9 @@ export const initialState = {
   generalinformation: {},
   team: {},
   keyfigures: [],
+  about: {
+    aboutcontents: [],
+  },
   isLoading: false,
   hasErrored: false,
   hasLoaded: false,
