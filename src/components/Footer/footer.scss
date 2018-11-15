@@ -3,11 +3,24 @@
   background-color: #111111;
   min-height: 40vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
   align-content: center;
+  a {
+    color: #EEEEEE;
+    text-decoration: none;
+  }
+  > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
   &-sitemap {
     display: flex;
     flex-direction: column;
@@ -15,8 +28,6 @@
       svg {
         min-width: 30px;
       }
-      color: #EEEEEE;
-      text-decoration: none;
     }
   }
   .social-network svg {

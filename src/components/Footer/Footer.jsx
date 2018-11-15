@@ -22,26 +22,44 @@ export class Footer extends Component {
 
     return (
       <div className="footer">
-        <div className="footer-sitemap">
-          <h4>Sitemap</h4>
-          <a href="#general-information">
-            <FontAwesomeIcon icon={faGlobeAsia} />
-            Maltem Consulting Group
-          </a>
-          <a href="#our-team">
-            <FontAwesomeIcon icon={faUsers} />
-            Our team
-          </a>
-          <a href="#key-facts">
-            <FontAwesomeIcon icon={faKey} />
-            Key facts
-          </a>
+        <div>
+          <div className="footer-sitemap">
+            <h4>Sitemap</h4>
+            <a href="#general-information">
+              <FontAwesomeIcon icon={faGlobeAsia} />
+              Maltem Consulting Group
+            </a>
+            <a href="#our-team">
+              <FontAwesomeIcon icon={faUsers} />
+              Our team
+            </a>
+            <a href="#key-facts">
+              <FontAwesomeIcon icon={faKey} />
+              Key facts
+            </a>
+          </div>
+          <div>
+            <h4>Follow us</h4>
+            <SocialNetworks
+              socialNetworks={socialnetworks}
+            />
+          </div>
         </div>
         <div>
-          <h4>Follow us</h4>
-          <SocialNetworks
-            socialNetworks={socialnetworks}
-          />
+          <div>
+            <h4>Location</h4>
+            23/F, Bayfield Building,
+            <br />
+            99 Hennessy Rd,
+            <br />
+            Wan Chai
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="mailto:hongkong@maltem.com">hongkong@maltem.com</a>
+            <br />
+            <a href="tel:+85225298548">2529 8548</a>
+          </div>
         </div>
       </div>
     );
