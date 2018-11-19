@@ -7,7 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 const proxyquire = noCallThru();
 configure({ adapter: new Adapter() });
-let generalInformation;
+let groupdescription;
 
 const GeneralInformation = proxyquire('./GeneralInformation.jsx', {
   './GeneralInfoEco/GeneralInfoEco': '',
@@ -15,8 +15,15 @@ const GeneralInformation = proxyquire('./GeneralInformation.jsx', {
 
 describe('GeneralInformation', () => {
   beforeEach(() => {
-    generalInformation = {
+    groupdescription = {
       description: 'Maltem description',
+      groupentities: [
+        {
+          logo: {
+            url: '',
+          },
+        },
+      ],
       hasErrored: false,
       isLoading: false,
     };
@@ -25,7 +32,7 @@ describe('GeneralInformation', () => {
   it('renders the GeneralInformation component', () => {
     const wrapper = shallow(
       <GeneralInformation
-        generalinformation={generalInformation}
+        groupdescription={groupdescription}
       />,
     );
     expect(wrapper.find('.general-information').children()).to.have.lengthOf(3);
@@ -34,7 +41,7 @@ describe('GeneralInformation', () => {
   it('renders the GeneralInformation component when there is no description', () => {
     const wrapper = shallow(
       <GeneralInformation
-        generalinformation={{}}
+        groupdescription={{}}
       />,
     );
     expect(wrapper.find('.general-information')).to.have.lengthOf(1);

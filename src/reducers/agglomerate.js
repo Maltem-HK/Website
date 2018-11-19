@@ -7,7 +7,9 @@ import {
 export const initialState = {
   socialnetworks: [],
   welcomewords: [],
-  generalinformation: {},
+  groupdescription: {
+    groupentities: [],
+  },
   team: {},
   keyfigures: [],
   about: {

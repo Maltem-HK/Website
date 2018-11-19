@@ -36,7 +36,7 @@ export class App extends Component {
       agglomerate: {
         welcomewords,
         socialnetworks,
-        generalinformation,
+        groupdescription,
         team,
         keyfigures,
         about,
@@ -60,7 +60,7 @@ export class App extends Component {
             <div>
               <SlideComponent className="slide-general-information">
                 <GeneralInformationComponent
-                  generalinformation={generalinformation}
+                  groupdescription={groupdescription}
                 />
               </SlideComponent>
             </div>
