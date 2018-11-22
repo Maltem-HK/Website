@@ -55,7 +55,7 @@ export class App extends Component {
             </SlideComponent>
           </div>
         </ScrollableAnchor>
-        <Conditional test={this.loadSuccess('generalinformation')}>
+        <Conditional test={this.loadSuccess('groupdescription')}>
           <ScrollableAnchor id="general-information">
             <div>
               <SlideComponent className="slide-general-information">
