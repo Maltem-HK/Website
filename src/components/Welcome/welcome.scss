@@ -1,9 +1,3 @@
-@media screen and (orientation:portrait) {
-  .slide-welcome {
-    background: url(../../assets/img/welcome-hong-kong-view-portrait.png) no-repeat fixed center;
-  }
-}
-
 .slide-welcome {
   background: url(../../assets/img/welcome-hong-kong-view.jpg) no-repeat fixed center;
   background-size: cover;
@@ -56,5 +50,11 @@
         color: #FFFFFF;
       }
     }
+  }
+}
+@media screen and (orientation:portrait) {
+  .slide-welcome {
+    background: url(../../assets/img/welcome-hong-kong-view-portrait.png) no-repeat fixed center;
+    background-size: cover;
   }
 }
