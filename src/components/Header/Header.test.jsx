@@ -48,7 +48,7 @@ describe('Header', () => {
         agglomerate={agglomerate}
       />,
     );
-    expect(wrapper.find('.header ul').children()).to.have.lengthOf(4);
+    expect(wrapper.find('.header ul').children()).to.have.lengthOf(5);
   });
 
   it('renders the Header component without hide class', () => {

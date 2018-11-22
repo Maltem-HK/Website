@@ -60,6 +60,11 @@ export class Header extends Component {
               <a href="#key-facts">Key facts</a>
             </Conditional>
           </li>
+          <li>
+            <Conditional test={this.loadSuccess('about')}>
+              <a href="#about-us">About us</a>
+            </Conditional>
+          </li>
         </ul>
       </nav>
     );

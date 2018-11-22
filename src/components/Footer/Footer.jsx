@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faGlobeAsia, faKey } from '@fortawesome/free-solid-svg-icons';
+import {
+  faUsers,
+  faGlobeAsia,
+  faKey,
+  faAddressCard,
+} from '@fortawesome/free-solid-svg-icons';
 import { agglomerateFetchData } from '../../actions/agglomerate';
 import SocialNetworks from '../SocialNetwork/SocialNetwork';
 import './footer.scss';
@@ -36,6 +41,10 @@ export class Footer extends Component {
             <a href="#key-facts">
               <FontAwesomeIcon icon={faKey} />
               Key facts
+            </a>
+            <a href="#about-us">
+              <FontAwesomeIcon icon={faAddressCard} />
+              About us
             </a>
           </div>
           <div>
